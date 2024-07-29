@@ -140,26 +140,25 @@
                 <div class="col-12">
                     <div class="section-heading dark text-center">
                         <span></span>
-                        <h4>Barcha taomlar</h4>
+                        <h4>Barcha davlatlar</h4>
                        
                     </div>
                 </div>
             </div>
             <div class="row">
                 <!-- Single Features Area -->
-                {%for food in foods%}
+                {%for i in cauntry%}
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-features-area mb-50">
                         
-                        <a href="{% url 'detail' food.id %}"><img src="{{food.image.url}}" alt="{{food.name}}"></a>
+                        <a href="{%url 'recipe' i.id %}"><img src="{{i.image.url}}" alt="{{i.name}}"></a>
                         <!-- Price -->
                         {% comment %} <div class="price-start">
                             <p>FROM UZS {{tour.price}}</p>
                         </div> {% endcomment %}
                         <div class="feature-content d-flex align-items-center justify-content-between">
                             <div class="feature-title">
-                                <h5>{{food.name}}</h5>
-                                <p>{{food.country}}</p>
+                                <h6>{{i.name}}</h6>
                             </div>
                             <div class="feature-favourite">
                                 <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>

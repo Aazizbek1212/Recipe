@@ -17,6 +17,11 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        .ratings .fa {
+            color: gold;
+        }
+    </style>
 
 </head>
 
@@ -104,8 +109,9 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="{%url 'home'%}">Bosh sahifa</a></li>
                                     <li><a href="receipe-post.html">Receipies</a></li>
+                                    <li><a href="{%url 'cauntry'%}">Davlatlar</a></li>
                                     <li><a href="{%url 'allfoods'%}">Barcha taomlar</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
@@ -199,7 +205,7 @@
                         <!-- Content -->
                         <div class="top-cta-content">
                             <h3>Taomlar</h3>
-                            <a href="receipe-post.html" class="btn delicious-btn">Barchasini ko'rish</a>
+                            <a href="{%url 'allfoods'%}" class="btn delicious-btn">Barchasini ko'rish</a>
                         </div>
                     </div>
                 </div>
@@ -229,13 +235,15 @@
                             <a href="{%url 'detail' food.id %}">
                                 <h5>{{food.name}}</h5>
                             </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
+                            
+                                <div class="ratings" data-rating="{{ food.rating }}">
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -456,6 +464,33 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{% static 'js/plugins/plugins.js' %}"></script>
     <!-- Active js -->
     <script src="{% static 'js/active.js' %}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function setStarRating(element, rating) {
+                const stars = element.getElementsByClassName('fa');
+                for (let i = 0; i < stars.length; i++) {
+                    if (rating >= i + 1) {
+                        stars[i].classList.remove('fa-star-o');
+                        stars[i].classList.add('fa-star');
+                    } else if (rating > i && rating < i + 1) {
+                        stars[i].classList.remove('fa-star-o');
+                        stars[i].classList.add('fa-star-half-o');
+                    } else {
+                        stars[i].classList.remove('fa-star');
+                        stars[i].classList.remove('fa-star-half-o');
+                        stars[i].classList.add('fa-star-o');
+                    }
+                }
+            }
+
+            const ratingElements = document.getElementsByClassName('ratings');
+            for (let i = 0; i < ratingElements.length; i++) {
+                const ratingElement = ratingElements[i];
+                const rating = parseFloat(ratingElement.getAttribute('data-rating'));
+                setStarRating(ratingElement, rating);
+            }
+        });
+    </script>
 </body>
 
 </html>
