@@ -1,4 +1,4 @@
-{%load static%}
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,10 +10,10 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Yemak.uz</title>
+    <title>Dessert/Detail</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+    <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
@@ -40,8 +40,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form action="{% url 'allfoods' %}" method="GET">
-                        <input type="search" name="Search" id="search" placeholder="Search">
+                    <form action="{% url 'alldessert' %}" method="GET">
+                        <input type="search" name="DessertSearch" id="search" placeholder="Search">
                         <input type="submit" class="d-none" value="submit">
                     </form>
                 </div>
@@ -63,7 +63,6 @@
                                 <ul>
                                     <li><a href="#">Salom hammaga!</a></li>
                                     <li><a href="#">Xush kelibsiz yemak.uz saytiga</a></li>
-                                    
                                 </ul>
                             </div>
                         </div>
@@ -72,10 +71,11 @@
                     <!-- Top Social Info -->
                     <div class="col-12 col-sm-6">
                         <div class="top-social-info text-right">
+                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -112,7 +112,7 @@
                                     <li class="active"><a href="{%url 'home'%}">Bosh sahifa</a></li>
                                     <li><a href="{%url 'cauntry'%}">Davlatlar</a></li>
                                     <li><a href="{%url 'allfoods'%}">Barcha taomlar</a></li>
-                                    <li><a href="{% url 'about'%}">Biz haqimizda</a></li>
+                                    <li><a href="{%url 'about'%}">Biz haqimizda</a></li>
                                     <li><a href="contact.html">Bog'lanish</a></li>
                                 </ul>
 
@@ -131,230 +131,167 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Hero Area Start ##### -->
-    <section class="hero-area">
-        <div class="hero-slides owl-carousel">
-            <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url({%static 'picture/istockphoto-1316145932-612x612.jpg'%});">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Yemak.uz</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
-                                <a href="{%url 'allfoods' %}" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">Barcha Taomlarni ko'rish</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url({%static 'picture/2.jpg' %});">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Yemak.uz</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
-                                <a href="{%url 'allfoods' %}" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">Barcha Taomlarni ko'rish</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url({%static 'picture/3.jpg' %});">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Yemak.uz</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
-                                <a href="{%url 'allfoods' %}" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">Barcha Taomlarni ko'rish</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Hero Area End ##### -->
-
-    <!-- ##### Top Catagory Area Start ##### -->
-    <section class="top-catagory-area section-padding-80-0">
-        <div class="container">
-            <div class="row">
-                <!-- Top Catagory Area -->
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-catagory">
-                        <img src="{%static 'picture/shirinlik.jpg'%}" alt="">
-                        <!-- Content -->
-                        <div class="top-cta-content">
-                            <h3>SHirinliklar</h3>
-                            
-                            <a href="{%url 'alldessert'%}" class="btn delicious-btn">Barchasini ko'rish</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Top Catagory Area -->
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-catagory">
-                        <img src="{%static 'picture/taom.jpg'%}" alt="">
-                        <!-- Content -->
-                        <div class="top-cta-content">
-                            <h3>Taomlar</h3>
-                            <a href="{%url 'allfoods'%}" class="btn delicious-btn">Barchasini ko'rish</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Top Catagory Area End ##### -->
-
-    <!-- ##### Best Receipe Area Start ##### -->
-    <section class="best-receipe-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h3>Mashhur taomlar retsepti</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                {%for food in foods%}
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{{food.image.url}}" alt="">
-                        <div class="receipe-content">
-                            <a href="{%url 'detail' food.id %}">
-                                <h5>{{food.name}}</h5>
-                            </a>
-                            
-                                <div class="ratings" data-rating="{{ food.rating }}">
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                {%endfor%}
-            </div>
-        </div>
-    </section>
-    <!-- ##### Best Receipe Area End ##### -->
-
-    <!-- ##### CTA Area Start ##### -->
-    <section class="cta-area bg-img bg-overlay" style="background-image: url({% static 'img/bg-img/bg4.jpg' %});">
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url({% static 'picture/dessert-background-2sps0go2ilc7pbnd.jpg' %});">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
-                    <!-- Cta Content -->
-                    <div class="cta-content text-center">
-                        <h2>Dunyoning eng sara taomlari retsepti</h2>
-                        <a href="{%url 'allfoods'%}" class="btn delicious-btn">Barchasini ko'rish</a>
+                    <div class="breadcumb-text text-center">
+                        <h2>Recipe</h2>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ##### CTA Area End ##### -->
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
 
-    <!-- ##### Small Receipe Area Start ##### -->
-    <section class="small-receipe-area section-padding-80-0">
+    <div class="receipe-post-area section-padding-80">
+
+        <!-- Receipe Post Search -->
+        <div class="receipe-post-search mb-80">
+            <div class="container">
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <select name="select1" id="select1">
+                                <option value="1">All Receipies Categories</option>
+                                <option value="1">All Receipies Categories 2</option>
+                                <option value="1">All Receipies Categories 3</option>
+                                <option value="1">All Receipies Categories 4</option>
+                                <option value="1">All Receipies Categories 5</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <select name="select1" id="select2">
+                                <option value="1">All Receipies Categories</option>
+                                <option value="1">All Receipies Categories 2</option>
+                                <option value="1">All Receipies Categories 3</option>
+                                <option value="1">All Receipies Categories 4</option>
+                                <option value="1">All Receipies Categories 5</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <input type="search" name="Search" placeholder="Search Receipies">
+                        </div>
+                        <div class="col-12 col-lg-3 text-right">
+                            <button type="submit" class="btn delicious-btn">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Receipe Slider -->
         <div class="container">
             <div class="row">
-                {%for i in food%}
-                <!-- Small Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-small-receipe-area d-flex">
-                        <!-- Receipe Thumb -->
-                        <div class="receipe-thumb">
-                            <img src="{{i.image.url}}" alt="{{i.name}}">
+                <div class="col-12">
+                    <div class="receipe-slider owl-carousel">
+                        <img src="{{dessert.image.url}}" alt="">
+                        <img src="{{dessert.image.url}}" alt="">
+                        <img src="{{dessert.image.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Receipe Content Area -->
+        <div class="receipe-content-area">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="receipe-headline my-5">
+                            <span>April 05, 2018</span>
+                            <h2>{{dessert.name.}}</h2>
+                            {% comment %} <div class="receipe-duration">
+                                <h6>Prep:{{recipe.prep}} mins</h6>
+                                <h6>Cook:{{recipe.cook}} mins</h6>
+                                <h6>Yields:{{recipe.yields}} </h6>
+                            </div> {% endcomment %}
                         </div>
-                        <!-- Receipe Content -->
-                        <div class="receipe-content">
-                            <span>January 04, 2018</span>
-                            <a href="receipe-post.html">
-                                <h5>{{i.name}}</h5>
-                                <p>{{i.country}}</p>
-                            </a>
-                            <div class="ratings" data-rating="{{ i.rating }}">
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="receipe-ratings text-right my-5">
+                            <div class="ratings" data-rating="{{ dessert.rating }}">
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                {%endfor%}
-
-            </div>
-        </div>
-    </section>
-    <!-- ##### Small Receipe Area End ##### -->
-
-    <!-- ##### Quote Subscribe Area Start ##### -->
-    <section class="quote-subscribe-adds">
-        <div class="container">
-            <div class="row align-items-end">
-                <!-- Quote -->
-                <div class="col-12 col-lg-4">
-                    <div class="quote-area text-center">
-                        <span>"</span>
-                        <h4>Nothing is better than going home to family and eating good food and relaxing</h4>
-                        <p>Azizbek Ilyosov</p>
-                        <div class="date-comments d-flex justify-content-between">
-                            <div class="date">January 04, 2018</div>
-                            <div class="comments">2 Comments</div>
+                            <a href="{%url 'alldessert' %}" class="btn delicious-btn">Barcha shirinliklarni ko'rish</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Newsletter -->
-                {% comment %} <div class="col-12 col-lg-4">
-                    <div class="newsletter-area">
-                        <h4>Subscribe to our newsletter</h4>
-                        <!-- Form -->
-                        <div class="newsletter-form bg-img bg-overlay" style="background-image: url({% static 'img/bg-img/bg1.jpg' %});">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <!-- Single Preparation Step -->
+                        
+                            <h4>Description</h4>
+
+                            <p>{{dessert.description}} </p>
+                       
+                       
+                    </div>
+
+                    <!-- Ingredients -->
+                    <div class="col-12 col-lg-4">
+                        <div class="ingredients">
+                            <h4>Ingredients</h4>
+                            <!-- Custom Checkbox -->
+                            {%for i in dessert.ingredients.all%}
+                                <p>{{i.name}}</p>
+                            {%endfor%}
+           
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading text-left">
+                            <h3>Leave a comment</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-form-area">
                             <form action="#" method="post">
-                                <input type="email" name="email" placeholder="Subscribe to newsletter">
-                                <button type="submit" class="btn delicious-btn w-100">Subscribe</button>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6">
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                    </div>
+                                    {% comment %} <div class="col-12">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    </div> {% endcomment %}
+                                    <div class="col-12">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn delicious-btn mt-30" type="submit">Yuborish</button>
+                                    </div>
+                                </div>
                             </form>
-                            <p>Fusce nec ante vitae lacus aliquet vulputate. Donec sceleri sque accumsan molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
                         </div>
-                    </div>
-                </div> {% endcomment %}
-
-                <!-- Adds -->
-                <div class="col-12 col-lg-4">
-                    <div class="delicious-add">
-                        <img src="img/bg-img/add.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ##### Quote Subscribe Area End ##### -->
+    </div>
 
     <!-- ##### Follow Us Instagram Area Start ##### -->
     <div class="follow-us-instagram">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h5>Instagrmga obuna bo'ling</h5>
+                    <h5>Follow Us Instragram</h5>
                 </div>
             </div>
         </div>
@@ -362,7 +299,7 @@
         <div class="insta-feeds d-flex flex-wrap">
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="{% static 'img/bg-img/insta1.jpg' %}" alt="">
+                <img src="img/bg-img/insta1.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -371,7 +308,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="{% static 'img/bg-img/insta2.jpg' %}" alt="">
+                <img src="img/bg-img/insta2.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -380,7 +317,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="{% static 'img/bg-img/insta3.jpg' %}" alt="">
+                <img src="img/bg-img/insta3.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -389,7 +326,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="{% static 'img/bg-img/insta4.jpg' %}" alt="">
+                <img src="img/bg-img/insta4.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -398,7 +335,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="{% static 'img/bg-img/insta5.jpg' %}" alt="">
+                <img src="img/bg-img/insta5.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -407,7 +344,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="{% static 'img/bg-img/insta6.jpg' %}" alt="">
+                <img src="img/bg-img/insta6.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -416,7 +353,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="{% static 'img/bg-img/insta7.jpg' %}" alt="">
+                <img src="img/bg-img/insta7.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -433,12 +370,12 @@
                 <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
                     <!-- Footer Social Info -->
                     <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-
                     </div>
                     <!-- Footer Logo -->
                     <div class="footer-logo">
