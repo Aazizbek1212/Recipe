@@ -56,10 +56,3 @@ class Review(models.Model):
         return self.name
     
 
-class About(models.Model):
-    founder = models.CharField(max_length=500, blank=True, null=True)
-    description = models.TextField(blank=True, null=True)
-
-    def __str__(self):
-        return self.founder
-

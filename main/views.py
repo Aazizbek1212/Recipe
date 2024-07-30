@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404,  render
 from django_filters.views import FilterView
 
 from main.filters import DessertFilter, RecipeFilter
-from main.models import About, Cauntry, Dessert, Ingredient, Recipe, Review
+from main.models import  Cauntry, Dessert, Ingredient, Recipe, Review
 
 def home_view(request):
     foods = Recipe.objects.all()[:3]
@@ -66,7 +66,6 @@ def dessert_detail_view(request, pk):
 
 
 def about_view(request):
-    about = About.objects.all()
-    return render(request, 'about.html', {'about':about})
+    return render(request, 'about.html')
 
 
