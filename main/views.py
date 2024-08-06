@@ -14,7 +14,6 @@ def home_view(request):
 
 def detail_view(request, pk):
     recipe = get_object_or_404(Recipe, id=pk)
- 
     return render(request, 'detail.html', {'recipe':recipe})
 
 
