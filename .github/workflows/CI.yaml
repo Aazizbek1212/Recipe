@@ -1,4 +1,4 @@
-name = Recipe
+name = Recipe Backend
 
 on:
   push:
@@ -27,7 +27,5 @@ jobs:
         pip install flake8
         flake8
       - name: Run tests with coverage
-
-
         run:
         python manage.py test
