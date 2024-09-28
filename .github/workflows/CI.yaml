@@ -24,8 +24,8 @@ jobs:
           pip install -r requirements.text
       - name: Lint with flake8
         run:
-        pip install flake8
-        flake8
+          pip install flake8
+          flake8
       - name: Run tests with coverage
         run:
         python manage.py test
