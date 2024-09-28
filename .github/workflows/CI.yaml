@@ -1,4 +1,4 @@
-name = Recipe Backend
+name: Recipe Backend
 
 on:
   push:
