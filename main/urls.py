@@ -1,7 +1,8 @@
 from django.urls import path
 
 
-from main.views import Desserts, Foods, about_view, cauntry_view, dessert_detail_view, detail_view, home_view, recipe_view
+from main.views import Desserts, Foods, about_view, cauntry_view, dessert_detail_view, detail_view
+from main.views import home_view,  recipe_view
 
 
 urlpatterns = [
@@ -13,5 +14,4 @@ urlpatterns = [
     path('dessert/', Desserts.as_view(), name='alldessert'),
     path('dessert/detail/<int:pk>/', dessert_detail_view, name='dessertdetail'),
     path('about/', about_view, name='about'),
-    
 ]

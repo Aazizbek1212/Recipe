@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class Cauntry(models.Model):
     image = models.ImageField(upload_to='iamges/cauntry/', blank=True, null=True)
     name = models.CharField(max_length=200)
@@ -12,7 +11,6 @@ class Cauntry(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=500, blank=True, null=True)
-    
 
     def __str__(self):
         return self.name
@@ -27,7 +25,6 @@ class Dessert(models.Model):
 
     def __str__(self):
         return self.name
-
 
 
 class Recipe(models.Model):
@@ -54,5 +51,3 @@ class Review(models.Model):
 
     def __str__(self):
         return self.name
-    
-
