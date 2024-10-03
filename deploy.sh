@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Activate your virtual environment
 source venv/bin/activate
 
 git pull origin main
