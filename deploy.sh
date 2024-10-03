@@ -12,4 +12,4 @@ python manage.py migrate
 
 python manage.py collectstatic --noinput
 
-sudo systemctl restart recipe
+sudo systemctl restart Recipe

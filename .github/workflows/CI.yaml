@@ -63,5 +63,5 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh root@137.184.135.244 "cd ../home/recipe && git pull && ./deploy.sh"
+          ssh root@137.184.135.244 "cd ../home/Recipe && git pull && ./deploy.sh"
         shell: bash
