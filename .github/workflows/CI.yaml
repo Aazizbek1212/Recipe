@@ -31,4 +31,4 @@ jobs:
           python manage.py test
       - name: Emailga xabar jo'natish
         run: |
-          python manage.py send_email
+          python manage.py send_mail

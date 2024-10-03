@@ -108,7 +108,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = 'azizbekilyosov1212'
-EMAIL_HOST_PASSWORD = 'aspa imxz wppw twfu'
+EMAIL_HOST_PASSWORD = 'kaeb znns yhdm tsnf'
 
 
 # Internationalization
